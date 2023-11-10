@@ -1,0 +1,32 @@
+//Java program to print the area of rectangle by creating a class taking the values of its length and width as parameters of its constructor and having a method which returns the area of the rectangle. Length and width are entered through keyboard.
+package shruti
+
+import java.util.Scanner;
+
+public class rect_area {
+	double length;
+	double width;
+    rect_area(double l, double w){
+    	length=l;
+    	width=w;
+    }
+    double area() {
+    	return length*width;
+    }
+
+
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter length of rectangle: ");
+		double l=sc.nextDouble();
+		System.out.println("Enter width of rectangle: ");
+		double w=sc.nextDouble();
+		sc.close();
+		rect_area r=new rect_area(l,w);
+		System.out.println("The area of the rectangle = " + " " + r.area());
+	}
+}
+
